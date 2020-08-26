@@ -19,6 +19,9 @@ export default function CreateTask() {
   const onPress = () => {
     console.log("Camera on!!!");
   };
+  const onClick = () => {
+    console.log("Hi there!");
+  };
   return (
     <ScrollView pagingEnabled>
       <View style={styles.header}>
@@ -114,7 +117,9 @@ export default function CreateTask() {
         </View>
       </View>
       <View style={styles.bottomView}>
-        <Text style={styles.bottomText}>NEXT</Text>
+        <TouchableOpacity style={styles.button} onPress={onClick}>
+          <Text style={styles.buttonText}>NEXT</Text>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
