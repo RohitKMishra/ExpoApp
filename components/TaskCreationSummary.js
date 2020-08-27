@@ -1,14 +1,24 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import { Icon } from "native-base";
 import { SearchBar } from "react-native-elements";
+import TaskArea from "./TaskArea";
 
 export default function TaskCreationSummary() {
-  const [search] = useState();
+  const [value, setValue] = useState();
+  const Click = () => {
+    console.log("Hi there!");
+  };
   return (
     <ScrollView pagingEnabled>
       <View style={styles.header}>
@@ -24,8 +34,8 @@ export default function TaskCreationSummary() {
         <SearchBar
           lightTheme
           placeholder="Search Zones and Wards"
-          onChangeText={console.log("Search Bar!!")}
-          value={search}
+          onChangeText={Click}
+          value={value}
           containerStyle={{
             backgroundColor: "white",
             borderTopColor: "white",
@@ -39,6 +49,29 @@ export default function TaskCreationSummary() {
             marginHorizontal: 20,
           }}
         ></SearchBar>
+      </View>
+      <View style={{ flexDirection: "row", marginLeft: 22, marginVertical: 5 }}>
+        <TouchableOpacity style={styles.areaButton} onPress={Click}>
+          <Text style={styles.areaText}>Kukatpally</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.areaButton} onPress={Click}>
+          <Text style={styles.areaText}>Madhapur</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.areaButton} onPress={Click}>
+          <Text style={styles.areaText}>Gachibowli</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.showAll} onPress={Click}>
+          <Text style={styles.areaText}>Show All</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={{ marginLeft: 20, marginTop: 5 }}>
+        <TaskArea />
+      </View>
+      <View style={{ marginLeft: 20, marginTop: 10 }}>
+        <TaskArea />
+      </View>
+      <View style={{ marginLeft: 20, marginTop: 10 }}>
+        <TaskArea />
       </View>
     </ScrollView>
   );
@@ -63,9 +96,33 @@ const styles = StyleSheet.create({
     width: wp("80%"),
   },
   taskDetailsText: {
-    paddingLeft: 20,
-    paddingTop: 20,
+    marginLeft: 20,
+    marginTop: 20,
     fontWeight: "bold",
   },
-  search: {},
+  searchBar: {
+    backgroundColor: "white",
+  },
+  areaButton: {
+    width: wp("22%"),
+    height: hp("4%"),
+    borderColor: "#c0c0c0",
+    borderWidth: 2,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    margin: 3,
+  },
+  areaText: {
+    fontWeight: "bold",
+    color: "#1E90FF",
+    fontSize: 12,
+  },
+  showAll: {
+    width: wp("20%"),
+    height: hp("4%"),
+    justifyContent: "center",
+    alignItems: "center",
+    marginVertical: 2,
+  },
 });

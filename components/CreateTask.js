@@ -116,11 +116,6 @@ export default function CreateTask() {
           </View>
         </View>
       </View>
-      <View style={styles.bottomView}>
-        <TouchableOpacity style={styles.button} onPress={onClick}>
-          <Text style={styles.buttonText}>NEXT</Text>
-        </TouchableOpacity>
-      </View>
     </ScrollView>
   );
 }
@@ -144,8 +139,8 @@ const styles = StyleSheet.create({
     width: wp("80%"),
   },
   taskDetailsText: {
-    paddingLeft: 20,
-    paddingTop: 20,
+    marginLeft: 20,
+    marginTop: 20,
     fontWeight: "bold",
   },
   textInput: {

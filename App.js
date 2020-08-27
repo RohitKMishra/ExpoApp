@@ -8,9 +8,9 @@ import TaskCreationSummary from "./components/TaskCreationSummary";
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <CreateTask /> */}
+      <CreateTask />
       {/* <AllTasks /> */}
-      <TaskCreationSummary />
+      {/* <TaskCreationSummary /> */}
       <StatusBar style="auto" />
     </View>
   );
