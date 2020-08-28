@@ -26,7 +26,10 @@ export default function CreateTask() {
     <ScrollView pagingEnabled>
       <View style={styles.header}>
         <View style={styles.headerIcon}>
-          <Icon name="arrow-back" />
+          <Icon
+            name="arrow-back"
+            onPress={() => console.log("Arrow clicked!")}
+          />
           <Text style={styles.text}>CREATE A NEW TASK</Text>
         </View>
       </View>
@@ -38,6 +41,7 @@ export default function CreateTask() {
             style={styles.textInput}
             onChangeText={(text) => onChangeText(text)}
             value={value}
+            placeholder={"Assign a name to the task"}
           ></TextInput>
         </View>
         <View style={{ marginTop: 20 }}>
@@ -47,6 +51,7 @@ export default function CreateTask() {
             multiline={true}
             onChangeText={(text) => onChangeText(text)}
             value={value}
+            placeholder={"Describe your task"}
           ></TextInput>
         </View>
         <View>
@@ -149,6 +154,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     marginHorizontal: 20,
     borderRadius: 10,
+    paddingLeft: 20,
   },
   taskNameText: {
     left: 30,

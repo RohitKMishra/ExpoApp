@@ -23,7 +23,10 @@ export default function TaskCreationSummary() {
     <ScrollView pagingEnabled>
       <View style={styles.header}>
         <View style={styles.headerIcon}>
-          <Icon name="arrow-back" />
+          <Icon
+            name="arrow-back"
+            onPress={() => console.log("Arrow clicked!")}
+          />
           <Text style={styles.text}>CREATE A NEW TASK</Text>
         </View>
       </View>
