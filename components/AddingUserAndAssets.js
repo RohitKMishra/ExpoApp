@@ -38,7 +38,7 @@ export default function AddingUserAndAssets() {
         <Text style={styles.taskDetailsText}>Add User</Text>
         <Text style={styles.taskNameText}>SUPERVISOR</Text>
         <View style={styles.supervisor}>
-          <Text style={{ fontSize: 16, fontWeight: "bold" }}>Raj Anand</Text>
+          <Text style={{ fontSize: hp(2), fontWeight: "bold" }}>Raj Anand</Text>
           <TouchableOpacity
             onPress={() => {
               console.log("Change button");
@@ -65,7 +65,7 @@ export default function AddingUserAndAssets() {
             <Text style={styles.inviteWorker}>Invite New worker</Text>
           </TouchableOpacity>
         </View>
-        <View style={{ padding: 20 }}>
+        <View style={{ padding: wp(4) }}>
           <FlatList
             // data={["Devin", "Den", "Dominc", "Jack"]}
             data={[
@@ -107,7 +107,7 @@ export default function AddingUserAndAssets() {
             placeholder={"Search for assets to add"}
           ></TextInput>
         </View>
-        <View style={{ padding: 20 }}>
+        <View style={{ padding: wp(5) }}>
           <FlatList
             // data={["Devin", "Den", "Dominc", "Jack"]}
             data={[
@@ -134,7 +134,7 @@ export default function AddingUserAndAssets() {
       {/* Task Details */}
       <View
         style={{
-          marginTop: 15,
+          marginTop: hp(3),
           borderTopColor: "#c0c0c0",
           borderTopWidth: StyleSheet.hairlineWidth,
         }}
@@ -143,30 +143,32 @@ export default function AddingUserAndAssets() {
           style={{
             justifyContent: "space-between",
             flexDirection: "row",
-            margin: 20,
+            margin: wp(5),
           }}
         >
           <View>
-            <Text style={{ fontSize: 16, fontWeight: "bold" }}>TASK 01</Text>
+            <Text style={{ fontSize: hp(1.9), fontWeight: "bold" }}>
+              TASK 01
+            </Text>
             <Text>AD HOC</Text>
           </View>
           <Text style={styles.listtext}>Collapse</Text>
         </View>
         <View
           style={{
-            marginTop: 15,
+            marginTop: hp(2),
             borderTopColor: "#c0c0c0",
             borderTopWidth: StyleSheet.hairlineWidth,
           }}
         >
-          <View style={{ flexDirection: "row", margin: 20 }}>
+          <View style={{ flexDirection: "row", margin: wp(5) }}>
             <View>
-              <Text style={{ color: "#c0c0c0", fontSize: 12 }}>SHIFT</Text>
-              <Text style={{ fontSize: 14 }}>Morning</Text>
+              <Text style={{ color: "#c0c0c0", fontSize: hp(1.7) }}>SHIFT</Text>
+              <Text style={{ fontSize: hp(1.7) }}>Morning</Text>
             </View>
-            <View style={{ marginLeft: 30 }}>
-              <Text style={{ color: "#c0c0c0", fontSize: 12 }}>ROUTE</Text>
-              <Text style={{ fontSize: 14 }}>Route 24</Text>
+            <View style={{ marginLeft: wp(8) }}>
+              <Text style={{ color: "#c0c0c0", fontSize: hp(1.7) }}>ROUTE</Text>
+              <Text style={{ fontSize: hp(1.7) }}>Route 24</Text>
             </View>
           </View>
         </View>
@@ -179,7 +181,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: "#fff",
     height: hp("6%"),
-    padding: 15,
+    padding: hp(1.6),
     borderBottomColor: "#708090",
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
@@ -188,40 +190,40 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#c0c0c0",
-    fontSize: 18,
+    fontSize: hp(2),
     textAlign: "center",
     fontWeight: "bold",
     width: wp("80%"),
   },
   taskDetailsText: {
-    marginLeft: 20,
-    marginTop: 20,
+    marginLeft: wp(5),
+    marginTop: hp(2.4),
     fontWeight: "bold",
   },
   taskNameText: {
-    left: 20,
-    padding: 5,
-
+    left: wp(5),
+    padding: hp(0.1),
     color: "#c0c0c0",
-    marginTop: 10,
+    marginTop: hp(1.2),
+    fontWeight: "bold",
   },
   textInput: {
     height: hp("7%"),
     borderColor: "#c0c0c0",
     borderWidth: 2,
-    marginHorizontal: 20,
+    marginHorizontal: wp(4.5),
     borderRadius: 10,
-    paddingLeft: 20,
+    paddingLeft: wp(5),
   },
   supervisor: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginHorizontal: 20,
+    marginHorizontal: wp(5),
   },
   inviteWorker: {
     color: "#1E90FF",
-    marginLeft: 20,
-    marginTop: 10,
+    marginLeft: wp(5),
+    marginTop: hp(1),
     fontWeight: "bold",
   },
   listview: {
@@ -231,7 +233,7 @@ const styles = StyleSheet.create({
   listtext: {
     color: "#1E90FF",
     fontWeight: "bold",
-    marginVertical: 10,
-    fontSize: 15,
+    marginVertical: hp(1.2),
+    fontSize: hp(1.8),
   },
 });

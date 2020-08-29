@@ -5,6 +5,10 @@ import Morning from "./Morning";
 import Afternoon from "./Afternoon";
 import Evening from "./Evening";
 import Others from "./Others";
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from "react-native-responsive-screen";
 export default function AllTasks() {
   return (
     <Container>
@@ -14,7 +18,7 @@ export default function AllTasks() {
       <Header
         style={{
           backgroundColor: "#fff",
-          height: 20,
+          height: hp(2),
           borderBottomColor: "#fff",
         }}
       />
@@ -78,14 +82,14 @@ export default function AllTasks() {
 const styles = StyleSheet.create({
   header: {
     backgroundColor: "#fff",
-    height: 60,
-    padding: 15,
+    height: hp(8),
+    padding: wp(4),
     borderBottomColor: "#708090",
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
   text: {
     color: "#c0c0c0",
-    fontSize: 20,
+    fontSize: hp(2.4),
     textAlign: "center",
     fontWeight: "bold",
   },

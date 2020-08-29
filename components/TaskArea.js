@@ -25,7 +25,7 @@ export default function TaskArea() {
             onPress={() => console.log("Works")}
           /> */}
           <Avatar.Icon
-            size={32}
+            size={hp(4.3)}
             color={Colors.grey600}
             backgroundColor={Colors.grey300}
             icon="account-circle"
@@ -57,35 +57,35 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#c0c0c0",
-    fontSize: 12,
+    fontSize: hp(1.3),
     textAlign: "center",
     fontWeight: "bold",
     width: wp("80%"),
-    marginTop: 5,
+    marginTop: hp(1),
   },
   taskDetailsText: {
-    marginLeft: 20,
-    marginTop: 5,
+    marginLeft: wp(3),
+    marginTop: hp(0.8),
     fontWeight: "bold",
-    fontSize: 15,
+    fontSize: hp(1.8),
   },
   addressLine: {
-    marginVertical: 5,
-    marginLeft: 15,
+    marginVertical: hp(0.5),
+    marginLeft: wp(3),
     flexDirection: "row",
     alignItems: "center",
   },
   areaText: {
     color: "#1E90FF",
-    fontSize: 18,
-    marginLeft: 10,
+    fontSize: hp(2.2),
+    marginLeft: wp(3),
   },
   avatar: {
-    marginLeft: 20,
-    marginTop: 5,
+    marginLeft: wp(5),
+    marginTop: hp(1),
   },
   progressText: {
     color: "green",
-    marginLeft: 80,
+    marginLeft: wp(16),
   },
 });

@@ -1,10 +1,15 @@
 import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from "react-native-responsive-screen";
 
 export default function Task() {
   const onPress = () => {
     console.log("Hi there!");
   };
+
   return (
     <View>
       <View style={styles.box}>
@@ -13,7 +18,9 @@ export default function Task() {
         </View>
         <View style={styles.viewBorder1}>
           <Text style={styles.tripAddress}>21/7.Morning.06:30 AM</Text>
-          <Text style={{ top: 25, left: 30 }}>5th Phase KPHB, Kukatpally</Text>
+          <Text style={{ top: hp(3), left: wp(7) }}>
+            5th Phase KPHB, Kukatpally
+          </Text>
         </View>
         <View style={styles.viewBorder2}>
           <TouchableOpacity style={styles.button} onPress={onPress}>
@@ -27,40 +34,40 @@ export default function Task() {
 
 const styles = StyleSheet.create({
   box: {
-    height: 220,
-    width: 350,
+    height: hp(27),
+    width: wp(88),
     borderColor: "#c0c0c0",
     borderWidth: 2,
     borderRadius: 10,
   },
   tripText: {
-    left: 30,
-    top: 20,
+    left: wp(6.5),
+    top: hp(2.2),
   },
   tripAddress: {
-    top: 20,
-    left: 30,
+    top: hp(2.4),
+    left: wp(7.5),
     fontWeight: "bold",
   },
   viewBorder1: {
     borderTopColor: "#c0c0c0",
     borderWidth: StyleSheet.hairlineWidth,
-    top: 40,
+    top: hp(5.5),
     borderColor: "#fff",
   },
   viewBorder2: {
     borderTopColor: "#c0c0c0",
     borderWidth: StyleSheet.hairlineWidth,
-    top: 80,
+    top: hp(11),
     borderColor: "#fff",
   },
   button: {
     backgroundColor: "#fff",
     alignItems: "center",
-    padding: 20,
+    padding: wp(5),
   },
   buttonText: {
-    fontSize: 17,
+    fontSize: hp(2),
     fontWeight: "bold",
     color: "#1E90FF",
   },

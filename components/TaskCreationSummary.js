@@ -33,7 +33,7 @@ export default function TaskCreationSummary() {
       <View>
         <Text style={styles.taskDetailsText}>Select Route</Text>
       </View>
-      <View style={{ marginVertical: 10 }}>
+      <View style={{ marginVertical: hp(1) }}>
         <SearchBar
           lightTheme
           placeholder="Search Zones and Wards"
@@ -49,11 +49,17 @@ export default function TaskCreationSummary() {
             borderWidth: 2,
             borderColor: "#c0c0c0",
             borderRadius: 10,
-            marginHorizontal: 20,
+            marginHorizontal: wp(4),
           }}
         ></SearchBar>
       </View>
-      <View style={{ flexDirection: "row", marginLeft: 22, marginVertical: 5 }}>
+      <View
+        style={{
+          flexDirection: "row",
+          marginLeft: wp(5),
+          marginVertical: hp(0.6),
+        }}
+      >
         <TouchableOpacity style={styles.areaButton} onPress={Click}>
           <Text style={styles.areaText}>Kukatpally</Text>
         </TouchableOpacity>
@@ -67,13 +73,13 @@ export default function TaskCreationSummary() {
           <Text style={styles.areaText}>Show All</Text>
         </TouchableOpacity>
       </View>
-      <View style={{ marginLeft: 20, marginTop: 5 }}>
+      <View style={{ marginLeft: wp(5), marginTop: hp(1) }}>
         <TaskArea />
       </View>
-      <View style={{ marginLeft: 20, marginTop: 10 }}>
+      <View style={{ marginLeft: wp(5), marginTop: hp(1.3) }}>
         <TaskArea />
       </View>
-      <View style={{ marginLeft: 20, marginTop: 10 }}>
+      <View style={{ marginLeft: wp(5), marginTop: hp(1.3) }}>
         <TaskArea />
       </View>
     </ScrollView>
@@ -84,7 +90,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: "#fff",
     height: hp("6%"),
-    padding: 15,
+    padding: hp(1.6),
     borderBottomColor: "#708090",
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
@@ -93,14 +99,14 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#c0c0c0",
-    fontSize: 18,
+    fontSize: hp(2),
     textAlign: "center",
     fontWeight: "bold",
     width: wp("80%"),
   },
   taskDetailsText: {
-    marginLeft: 20,
-    marginTop: 20,
+    marginLeft: wp(5),
+    marginTop: hp(2),
     fontWeight: "bold",
   },
   searchBar: {
@@ -114,18 +120,18 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-    margin: 3,
+    margin: wp(1),
   },
   areaText: {
     fontWeight: "bold",
     color: "#1E90FF",
-    fontSize: 12,
+    fontSize: hp(1.4),
   },
   showAll: {
     width: wp("20%"),
     height: hp("4%"),
     justifyContent: "center",
     alignItems: "center",
-    marginVertical: 2,
+    marginVertical: hp(0.5),
   },
 });
