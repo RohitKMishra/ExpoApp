@@ -4,8 +4,6 @@ import {
   View,
   Text,
   TextInput,
-  TouchableOpacity,
-  ScrollView,
   Picker,
   FlatList,
 } from "react-native";
@@ -13,10 +11,20 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { Icon } from "native-base";
+import { TouchableOpacity, ScrollView } from "react-native-gesture-handler";
+import { Icon, Button } from "native-base";
+import BottomSheet from "../components/BottomSheet";
+import * as Animatable from "react-native-animatable";
 
 export default function AddingUserAndAssets() {
   const [value, onChangeText] = useState();
+
+  const supervisor = [
+    "Supervisor a",
+    "Supervisor b",
+    "Supervisor c",
+    "Supervisor d",
+  ];
 
   return (
     <ScrollView pagingEnabled>
@@ -173,6 +181,28 @@ export default function AddingUserAndAssets() {
           </View>
         </View>
       </View>
+      <View>
+        <BottomSheet
+          child={
+            <View>
+              <Text style={styles.header}>CHANGE SUPERVISOR</Text>
+              {/*               
+              <View style={{ margin: wp(5) }}>
+                <ScrollView contentContainerStyle={{ marginTop: hp(2) }}>
+                  {supervisor.map((item) => {
+                    return (
+                      <Button transparent onPress={() => console.log(item)}>
+                        <Text style={styles.supervisorText}>{item}</Text>
+                      </Button>
+                    );
+                  })}
+                </ScrollView>
+              </View> */}
+            </View>
+          }
+          containerStyle={{ height: hp(70) }}
+        />
+      </View>
     </ScrollView>
   );
 }
@@ -232,6 +262,11 @@ const styles = StyleSheet.create({
   },
   listtext: {
     color: "#1E90FF",
+    fontWeight: "bold",
+    marginVertical: hp(1.2),
+    fontSize: hp(1.8),
+  },
+  supervisorText: {
     fontWeight: "bold",
     marginVertical: hp(1.2),
     fontSize: hp(1.8),
