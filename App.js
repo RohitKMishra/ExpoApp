@@ -5,16 +5,23 @@ import AllTasks from "./components/AllTasks";
 import CreateTask from "./components/CreateTask";
 import TaskCreationSummary from "./components/TaskCreationSummary";
 import AddingUserAndAssets from "./components/AddingUserAndAssets";
+import RaiseComplaint from "./components/RaiseComplaint";
+import CollapseWorker from "./components/CollapseWorkers";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      {/* <CreateTask /> */}
-      {/* <AllTasks /> */}
-      {/* <TaskCreationSummary /> */}
-      <AddingUserAndAssets />
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <View style={styles.container}>
+        {/* <CreateTask /> */}
+        {/* <AllTasks /> */}
+        {/* <TaskCreationSummary /> */}
+        {/* <AddingUserAndAssets /> */}
+        {/* <RaiseComplaint /> */}
+        <CollapseWorker />
+        <StatusBar style="auto" />
+      </View>
+    </SafeAreaProvider>
   );
 }
 

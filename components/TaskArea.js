@@ -7,14 +7,20 @@ import {
 // import UserAvatar from "react-native-user-avatar";
 import { Avatar, Colors } from "react-native-paper";
 
-export default function TaskArea() {
+export default function TaskArea({
+  route,
+  address,
+  workerNumber,
+  status,
+  image,
+}) {
   return (
     <View style={{ flex: 1 }}>
       <View style={styles.box1}>
-        <Image style={styles.img} source={require("../assets/maps.png")} />
+        <Image style={styles.img} source={image} />
         <View style={styles.addressLine}>
-          <Text style={styles.taskDetailsText}>Route 24</Text>
-          <Text style={styles.text}>KPHB 5th Phase, Kukatpally</Text>
+          <Text style={styles.taskDetailsText}>{route}</Text>
+          <Text style={styles.text}>{address}</Text>
         </View>
         <View style={styles.addressLine}>
           {/* <UserAvatar
@@ -34,8 +40,8 @@ export default function TaskArea() {
           <View
             style={{ flexDirection: "row", justifyContent: "space-between" }}
           >
-            <Text style={styles.areaText}>23 Workers</Text>
-            <Text style={styles.progressText}>IN PROGRESS</Text>
+            <Text style={styles.areaText}>{workerNumber} Workers</Text>
+            <Text style={styles.progressText}>{status}</Text>
           </View>
         </View>
       </View>

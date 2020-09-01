@@ -74,13 +74,31 @@ export default function TaskCreationSummary() {
         </TouchableOpacity>
       </View>
       <View style={{ marginLeft: wp(5), marginTop: hp(1) }}>
-        <TaskArea />
+        <TaskArea
+          route="Route 24"
+          image={require("../assets/maps.png")}
+          workerNumber="24"
+          status="IN PROCESS"
+          address="KPHB 5th Phase, Kukatpally"
+        />
       </View>
       <View style={{ marginLeft: wp(5), marginTop: hp(1.3) }}>
-        <TaskArea />
+        <TaskArea
+          route="Route 24"
+          image={require("../assets/maps.png")}
+          workerNumber="24"
+          status="IN PROCESS"
+          address="KPHB 5th Phase, Kukatpally"
+        />
       </View>
       <View style={{ marginLeft: wp(5), marginTop: hp(1.3) }}>
-        <TaskArea />
+        <TaskArea
+          route="Route 24"
+          image={require("../assets/maps.png")}
+          workerNumber="24"
+          status="IN PROCESS"
+          address="KPHB 5th Phase, Kukatpally"
+        />
       </View>
     </ScrollView>
   );

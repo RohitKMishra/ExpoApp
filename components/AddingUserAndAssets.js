@@ -12,9 +12,8 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import { TouchableOpacity, ScrollView } from "react-native-gesture-handler";
-import { Icon, Button } from "native-base";
+import { Icon } from "native-base";
 import BottomSheet from "../components/BottomSheet";
-import * as Animatable from "react-native-animatable";
 
 export default function AddingUserAndAssets() {
   const [value, onChangeText] = useState();

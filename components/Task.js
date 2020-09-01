@@ -5,7 +5,7 @@ import {
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 
-export default function Task() {
+export default function Task({ trip, shiftTime, address, status }) {
   const onPress = () => {
     console.log("Hi there!");
   };
@@ -14,17 +14,15 @@ export default function Task() {
     <View>
       <View style={styles.box}>
         <View>
-          <Text style={styles.tripText}>Trip 1: Door to door</Text>
+          <Text style={styles.tripText}>{trip}</Text>
         </View>
         <View style={styles.viewBorder1}>
-          <Text style={styles.tripAddress}>21/7.Morning.06:30 AM</Text>
-          <Text style={{ top: hp(3), left: wp(7) }}>
-            5th Phase KPHB, Kukatpally
-          </Text>
+          <Text style={styles.tripAddress}>{shiftTime}</Text>
+          <Text style={{ top: hp(3), left: wp(7) }}>{address}</Text>
         </View>
         <View style={styles.viewBorder2}>
           <TouchableOpacity style={styles.button} onPress={onPress}>
-            <Text style={styles.buttonText}>Start</Text>
+            <Text style={styles.buttonText}>{status}</Text>
           </TouchableOpacity>
         </View>
       </View>
